@@ -1,0 +1,11 @@
+wandb
+lightning_logs
+.ipynb_checkpoints
+__pycache__
+data
+artifacts
+.vscode
+logs/
+outputs/
+baseline_logs/
+checkpoint/

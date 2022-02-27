@@ -1,0 +1,36 @@
+# munit info
+use_munit: False
+
+# dataset info
+dataset: k49rotlt-2.0
+dataset_root: ./data/proc_kmnist_data
+
+# architecture info
+arch: resnet20
+
+# training rule
+loss_type: CE
+train_rule: None
+
+# training details
+rand_number: 0
+workers: 4
+
+epochs: 50
+steplr_epoch1: 30
+steplr_epoch2: 40
+start_epoch: 0
+batch_size: 128
+lr: 0.1
+momentum: 0.9
+weight_decay: 2e-4
+
+print_freq: 10000
+evaluate: False
+pretrained: False
+
+# saving/printing logs
+root_log: ./outputs/baseline/baseline_logs
+root_model: ./outputs/baseline/checkpoint
+verbose: False
+val_class_size: 30

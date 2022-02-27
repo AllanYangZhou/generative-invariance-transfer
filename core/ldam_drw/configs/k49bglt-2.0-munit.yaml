@@ -1,0 +1,41 @@
+# munit info
+use_munit: True
+munit_version: original_munit
+# Will be passed in by train_k49.sh
+munit_ckpt: null
+munit_config: null
+gen_frac: 0.5
+delayed_munit: True
+
+# dataset info
+dataset: k49bglt-2.0
+dataset_root: ./data/proc_kmnist_data
+
+# architecture info
+arch: resnet20
+
+# training rule
+loss_type: CE
+train_rule: DRS_Simple
+
+# training details
+rand_number: 0
+workers: 4
+
+epochs: 50
+start_epoch: 0
+steplr_epoch1: 30
+steplr_epoch2: 40
+batch_size: 128
+lr: 0.1
+momentum: 0.9
+weight_decay: 2e-4
+
+print_freq: 10000
+evaluate: False
+pretrained: False
+
+# saving/printing logs
+root_log: ./outputs/baseline/baseline_logs
+root_model: ./outputs/baseline/checkpoint
+verbose: False

@@ -1,0 +1,46 @@
+# munit info
+use_munit: False
+munit_version: original_munit
+munit_ckpt: ./outputs/cifar100_0.01/checkpoints/gen_00140000.pt
+munit_config: ./outputs/cifar100_0.01/config.yaml
+gen_frac: 0.5
+delayed_munit: True
+
+# dataset info
+dataset: CIFAR100
+dataset_root: ./data
+imb_type: exp
+imb_factor: 0.01
+powerlaw_value: 1.8
+
+# architecture info
+arch: resnet32
+
+# training rule
+loss_type: CE
+train_rule: None
+flip_aug: True
+weighted_gen: False
+
+# training details
+class_size_threshold: 100
+rand_number: 0
+workers: 4
+
+epochs: 200
+start_epoch: 0
+batch_size: 128
+lr: 0.1
+momentum: 0.9
+weight_decay: 2e-4
+
+print_freq: 10000
+resume: "None"
+evaluate: False
+pretrained: False
+
+# saving/printing logs
+root_log: ./outputs/baseline/baseline_logs
+root_model: ./outputs/baseline/checkpoint
+exp_str: experiment
+verbose: False
